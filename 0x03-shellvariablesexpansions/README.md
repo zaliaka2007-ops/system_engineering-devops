@@ -1,1 +1,1 @@
-This directory contains week 5 she\\ variables expansions
+This directory contains week 5 she\\ variables expansions.
