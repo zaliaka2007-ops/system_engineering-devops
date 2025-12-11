@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script contains the Highlander
 
-trap 'echo "I am invincible!!!"' SIGTERM
+trap 'echo OK' SIGTERM
 
 while true
 do
@@ -9,7 +9,6 @@ do
     sleep 2
 done
 
-pid=$(pgrep -f 7-highlander)
 if [ -n "$pid" ]; then
     kill "$pid"
 fi
