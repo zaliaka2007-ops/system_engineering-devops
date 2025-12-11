@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # This script displays a list of all currently running processes
 
-ps -e -o USER=USER, lstart=STARTED, cmd=CMD --forest
+ps -e -o user,cmd,lstart --forest | awk 'NR==1 {print "USER STARTED CMD"; next} {printf "%-8s %s %s %s\n", $1, $4, $3, $5, $6}'
 
