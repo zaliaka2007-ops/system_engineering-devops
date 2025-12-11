@@ -8,3 +8,8 @@ do
     echo "To infinity and beyond"
     sleep 2
 done
+
+pid=$(pgrep -f 7-highlander)
+if [ -n "$pid" ]; then
+    kill "$pid"
+fi
