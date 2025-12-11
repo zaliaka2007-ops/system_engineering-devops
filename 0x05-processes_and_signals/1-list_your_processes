@@ -1,11 +1,4 @@
 #!/usr/bin/env bash
 # This script displays a list of all currently running processes
 
-ps -e -o user,lstart,cmd --no-headers | awk '{ 
-    # Reformat the date/time string from columns 2-6 (e.g., "Fri May 5 10:27:24 2017")
-    # to "HH:MM:SS" (e.g., "10:27:24")
-    start_time=$4; 
-    # Print the reformatted output, ensuring alignment
-    printf "%-8s %s %s\n", $1, start_time, $7 " " $8 " " $9 " " $10 " " $11 " " $12 " " $13 " " $14 " " $15 " " $16 " " $17 " " $18 " " $19 " " $20; 
-}' | (echo "USER STARTED CMD"; cat)
-
+ps -e -o user,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,cmd --forest
