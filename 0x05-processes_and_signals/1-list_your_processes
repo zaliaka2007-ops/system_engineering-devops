@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script displays a list of all currently running processes
 
-ps -eo uid,pid,ppid,c,stime,tty,time,cmd --forest | sed 's/$/;/'
+ps -eo uid,cmd --forest --no-headers | sed 's/$/;/'
