@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # This script displays a list of all currently running processes
 
-SCRIPT_NAME=$(basename "$0")
-ps -eo uid=,cmd= --forest | sed "s#^#0 ./$SCRIPT_NAME ./$SCRIPT_NAME |#"
+ps -eo uid=,cmd= --forest --no-headers
