@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script contains the Highlander
 
-trap 'echo OK >&2' SIGTERM
+trap 'echo OK >&2; fflush' SIGTERM 2>/dev/null || trap 'echo OK' SIGTERM
 
 while true
 do
