@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script diaplays the beheaded process
+
+pid=$(pgrep -f 7-highlander)
+
+if [ -n "$pid" ]; then
+    kill -9 $pid
+fi
