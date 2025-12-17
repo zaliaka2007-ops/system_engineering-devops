@@ -10,6 +10,6 @@ do
 done
 
 pid=$(pgrep -f 7-highlander)
-if [ -n [["$pid"]] ]; then
+if [ -n "$pid" ]; then
     echo "PID of 7-highlander is $pid"
 fi
