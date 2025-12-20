@@ -2,7 +2,7 @@
 # This script contains the Highlander
 
 # print I am invincible!!! when receiving a SIGTERM signal 
-trap 'echo "I am invincible!!!"' SIGTERM
+trap "echo I am invincible!!!" SIGTERM
 
 while true
 do
